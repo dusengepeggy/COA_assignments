@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700,900');
+@font-face {
+    font-family: 'DIN Condensed';
+    src: url('/fonts/din-condensed-regular.woff2') format('woff2'),
+         url('/fonts/din-condensed-regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    width: "100%";
+    height: "100vh";
+    background-color: #000000;
+    padding-top: 30px;
+    
+    
+    
+}
+#box{
+    width: "100%";
+    height: "100vh";
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    gap:2px;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.subBox{
+    width: 293px;
+    height: 588px;
+    background-size:cover;
+    background-clip: inherit;
+    position: relative;
+}
+
+
+.name{
+   font-weight: 500;
+   font-size: 24px;
+   color: #FFFFFF;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+.location{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16.02px;
+    color: #FFFFFF;
+    font-family:'Poppins';
+
+}
+
+.descr{
+    display: none;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    padding-inline: 60px;
+    gap: 8px;
+    height: 100%;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    
+}
+
+.hover-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: none;
+    filter: none;
+    transition: filter 0.5s ease-in-out ,backdrop-filter 0.3s ease-in-out;
+}
+
+.subBox:hover {
+    transform: scale(1.1);
+    transition: 0.5s ease-in-out;
+    
+}
+
+.subBox:hover .hover-overlay {
+    backdrop-filter: blur(8px); 
+    filter: grayscale(100%);
+    background-color: rgba(0, 0, 0,0.7);
+    
+    
+
+}
+
+.subBox:hover .descr{
+    display: block;
+}
+
+
+
+@media (width<1024px) {
+    .info{
+        display: none;
+
+    }
+    .subBox{
+        width:98.5px;
+        height: 588px;
+        background-position-x: center;
+        
+
+    }
+    .subBox:hover{
+        cursor: pointer;
+        transition:0.4s ease ;
+            
+    }
+    
+
+    
+}
+
+
+
