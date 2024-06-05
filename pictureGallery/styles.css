@@ -120,12 +120,12 @@ a{
        
     }
     100% {
-        transform: translateY(-5%);
+        transform: translateY(-10%);
       
     }
 }
 .subBox:hover .slideout{
-    animation: slideUpOut 1s forwards;
+    animation: slideUpOut 1ms ease-in forwards;
 }
 
 .subBox:hover a{
