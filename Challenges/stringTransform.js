@@ -23,6 +23,8 @@ const handleString = (str) =>{
 
 }
 
+// change the string to check 
+
 const result1 = handleString("Hamburger") //divisible by 3 but not by 5
 const result2 = handleString("Pizza") //divisible by 5 but not by 3
 const result3 = handleString("Absorbefacients") // divisible by 15

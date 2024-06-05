@@ -45,7 +45,7 @@ body{
    font-weight: 500;
    font-size: 24px;
    color: #FFFFFF;
-   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+   font-family: 'Oswald', sans-serif
 }
 
 .location{
@@ -55,6 +55,14 @@ body{
     color: #FFFFFF;
     font-family: 'Poppins',sans-serif;
 
+}
+
+.desc{
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16.02px;
+    color: #FFFFFF;
+    font-family: 'Poppins',sans-serif;
 }
 
 .descr{
@@ -84,7 +92,7 @@ body{
 }
 
 .subBox:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
     transition: 0.5s ease-in-out;
     
 }
@@ -102,9 +110,22 @@ body{
     display: block;
 }
 
+.subBox:hover .smallInfo{
+    display: flex;
+}
+
+.smallInfo{
+    display: none;
+    flex-direction: column;
+    padding-inline: 60px;
+    gap: 8px;
+    height: 100%;
+    justify-content: center;
+    padding-bottom: 50px;
+}
 
 
-@media (width<1024px) {
+@media ( width < 1024px ) and (width >= 320px) {
     .info{
         display: none;
 
@@ -117,13 +138,64 @@ body{
 
     }
     .subBox:hover{
+        width: 228px;
         cursor: pointer;
         transition:0.4s ease ;
             
     }
+
+    .subBox:hover .smallInfo{
+        display: flex;
+    }
+
+    .smallInfo{
+        padding-inline: 20px;
+    }
     
 
     
+}
+
+@media (width< 320px) {
+    .info{
+        display: none;
+
+    }
+    .subBox{
+        width:98.5px;
+        height: 588px;
+        background-position-x: center;
+        
+
+    }
+    .subBox:hover{
+        width: 228px;
+        cursor: pointer;
+        transition:0.4s ease ;
+            
+    }
+
+    .subBox:hover .smallInfo{
+        display: flex;
+    }
+
+    .smallInfo{
+        padding-inline: 10px;
+    }
+    .name{
+        font-weight: 400;
+        font-size: 18px;
+    }
+    .location{
+        font-weight: 300;
+        font-size: 10px;
+    }
+    .desc{
+        font-weight: 300;
+        font-size: 10px;
+    }
+    
+
 }
 
 

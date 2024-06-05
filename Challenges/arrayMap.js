@@ -5,6 +5,8 @@ const handleArray = (arr,sum) => {
         return 
     }
 
+//The nested for loop is to group all the possible combination of 3 numbers without caring for the order
+
     for (let i = 0; i < arr.length; i++) {
         for (let j = i+1; j < arr.length; j++) {
             for (let k = j+1; k < arr.length; k++) {
@@ -17,6 +19,7 @@ const handleArray = (arr,sum) => {
     return false;
 
 }
+// change the given array and sum for checking if it really works 
 
 const answer =handleArray([1,2,3,4,-15,90,234,445,1546,555,-25],5000000000);
 console.log(answer);
